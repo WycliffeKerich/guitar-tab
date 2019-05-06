@@ -12,8 +12,8 @@ app.use(cors())
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 
-app.get('/status', (req,res) => {
-  res.send({message: 'Hello World'})
+app.post('/register', (req,res) => {
+  res.send({message: `Hello ${req.body.email}! Your user was registered. Have fun`})
 })
 
 const PORT = process.env.PORT || 8081// eslint-disable-line
